@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <Header></Header>
-    <Footer></Footer>
     <main>
       <div class="top-mv">
     <div class="wrap">
@@ -27,7 +26,7 @@
       <div class="top-service-list">
         <section class="top-service-item">
           <div class="top-service-item-img">
-            <img src="img/assets/service1.png" alt="IT人材育成事業" />
+            <img src="./assets/service1.png" alt="IT人材育成事業" />
           </div>
           <h3 class="top-service-item-ttl">IT人材育成事業</h3>
           <p class="top-service-item-description">
@@ -36,7 +35,7 @@
         </section>
         <section class="top-service-item">
           <div class="top-service-item-img">
-            <img src="img/assets/service2.png" alt="コーチング事業" />
+            <img src="./assets/service2.png" alt="コーチング事業" />
           </div>
           <h3 class="top-service-item-ttl">コーチング事業</h3>
           <p class="top-service-item-description">
@@ -45,7 +44,7 @@
         </section>
         <section class="top-service-item">
           <div class="top-service-item-img">
-            <img src="img/assets/service3.png" alt="ITコンサル事業" />
+            <img src="./assets/service3.png" alt="ITコンサル事業" />
           </div>
           <h3 class="top-service-item-ttl">ITコンサル事業</h3>
           <p class="top-service-item-description">
@@ -54,7 +53,7 @@
         </section>
         <section class="top-service-item">
           <div class="top-service-item-img">
-            <img src="img/assets/service4.png" alt="デジタルトランスフォーメーション事業" />
+            <img src="./assets/service4.png" alt="デジタルトランスフォーメーション事業" />
           </div>
           <h3 class="top-service-item-ttl">デジタルトランスフォーメーション事業</h3>
           <p class="top-service-item-description">
@@ -101,7 +100,7 @@
       <div class="top-blog-list">
         <article class="top-blog-item">
           <a href="#" class="top-blog-item-thumbnail">
-            <img src="img/assets/blog.png" alt="会社を創業した理由" />
+            <img src="./assets/blog.png" alt="会社を創業した理由" />
           </a>
           <p class="top-blog-item-date">2019/07/17</p>
           <h3 class="top-blog-item-ttl">
@@ -110,7 +109,7 @@
         </article>
         <article class="top-blog-item">
           <a href="#" class="top-blog-item-thumbnail">
-            <img src="img/assets/blog.png" alt="ITエンジニアを育成する最強メソッド" />
+            <img src="./assets/blog.png" alt="ITエンジニアを育成する最強メソッド" />
           </a>
           <div class="top-blog-item-info">
             <p class="top-blog-item-date">2019/11/11</p>
@@ -121,7 +120,7 @@
         </article>
         <article class="top-blog-item">
           <a href="#" class="top-blog-item-thumbnail">
-            <img src="img/asstes/blog.png" alt="コーチングによるモチベーション向上理論" />
+            <img src="./assets/blog.png" alt="コーチングによるモチベーション向上理論" />
           </a>
           <p class="top-blog-item-date">2020/08/01</p>
           <h3 class="top-blog-item-ttl">
@@ -160,6 +159,7 @@
     </div>
   </section>
   </main>
+  <Footer></Footer>
   </div>
 </template>
 
@@ -176,7 +176,7 @@
 };
 </script>
 
-<style>
+<style scoped>
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -276,7 +276,7 @@ input, select {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: require("./assets/common/mv.png") center / cover;
+  background: url("./assets/common/mv.png") center / cover;
   color: #fff;
 }
 
@@ -317,6 +317,9 @@ input, select {
   margin-right: calc(100% - (49% * 2));
 }
 
+.top-service-item-img img{
+  width: 100%;
+}
 .top-service-item:nth-child(2n){
   margin-right: 0;
 }
@@ -363,6 +366,8 @@ input, select {
   padding: 20px;
   display: flex;
   align-items: center;
+  text-decoration:none;
+  color:black;
 }
 
 .top-news-item-date{
@@ -398,8 +403,14 @@ input, select {
 .top-blog-item-ttl{
   font-weight: bold;
   font-size: 18px;
+  }
+  .top-blog-item-ttl a{
+    text-decoration:none;
+    color: black;
+  }
+.top-blog-item-thumbnail img{
+  width: 100%;
 }
-
 .top-blog-btn{
   margin: 40px auto 0;
 }
@@ -416,7 +427,10 @@ input, select {
 .top-company-item{
   width: 50%;
 }
-
+.top-company-item a{
+  text-decoration:none;
+  color: white;
+}
 .top-company-link{
   background-color: #cd0224;
 }
@@ -431,7 +445,10 @@ input, select {
   line-height: 10;
   text-align: center;
 }
-
+.wrap a{
+  text-decoration:none;
+  color: black;
+}
 @media screen and (max-width: 768px){
   .top-service-item{
     width: 100%;

@@ -16,12 +16,13 @@
           <li class="header-nav-item"><a href="contact.html">お問い合わせ</a></li>
         </ul>
       </nav>
-      <div class="menu" id="menu" @click="hamburger()" :class="{'active':isclass}">
+      <div class="menu" id="menu" @click="hamburger()" :class="{'active':isClass}">
         <span class="menu-line-top"></span>
         <span class="menu-line-middle"></span>
         <span class="menu-line-bottom"></span>
       </div>
       <nav class="drawer-nav" id="drawer-nav" :class="{'open':isClass}">
+        <p class="menu-title">TECH</p>
         <ul class="drawer-nav-list">
           <li class="drawer-nav-item"><a href="index.html">ホーム</a></li>
           <li class="drawer-nav-item"><a href="service.html">事業内容</a></li>
@@ -68,12 +69,19 @@ export default{
   font-size: 24px;
   width: 80px;
 }
+.header-ttl a{
+  text-decoration:none;
+  color:black;
+}
 
 .header-nav-list {
   display: flex;
   font-weight: bold;
+  }
+.header-nav-item a{
+  text-decoration: none;
+  color: black;
 }
-
 .header-nav-item:not(:last-child) {
   margin-right: 30px;
 }
