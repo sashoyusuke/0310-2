@@ -77,6 +77,7 @@ export default{
 .header-nav-list {
   display: flex;
   font-weight: bold;
+  list-style:none;
   }
 .header-nav-item a{
   text-decoration: none;
