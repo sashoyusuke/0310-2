@@ -4,7 +4,7 @@
         <small class="footer-copyright">&copy; 2020 TECH inc.</small>
         <nav class="footer-nav">
           <ul class="footer-nav-list">
-            <li class="footer-nav-item"><a href="index.html">ホーム</a></li>
+            <li class="footer-nav-item"><a href="App.vue">ホーム</a></li>
             <li class="footer-nav-item"><a href="service.html">事業内容</a></li>
             <li class="footer-nav-item"><a href="news.html">ニュース</a></li>
             <li class="footer-nav-item"><a href="blog.html">社員ブログ</a></li>
@@ -34,6 +34,7 @@
 .footer-nav-list {
   display: flex;
   flex-wrap: wrap;
+  list-style: none;
 }
 .footer-nav-item a{
   text-decoration: none;

@@ -7,7 +7,7 @@
       </h1>
       <nav class="header-nav">
         <ul class="header-nav-list">
-          <li class="header-nav-item"><a href="index.html">ホーム</a></li>
+          <li class="header-nav-item"><a href="App.vue">ホーム</a></li>
           <li class="header-nav-item"><a href="service.html">事業内容</a></li>
           <li class="header-nav-item"><a href="news.html">ニュース</a></li>
           <li class="header-nav-item"><a href="blog.html">社員ブログ</a></li>
@@ -138,16 +138,16 @@ export default{
     bottom: 0;
   }
 
-  .menu.open span:nth-of-type(1) {
+  .menu.active span:nth-of-type(1) {
     top: 14px;
     transform: rotate(45deg);
   }
 
-  .menu.open span:nth-of-type(2) {
+  .menu.active span:nth-of-type(2) {
     opacity: 0;
   }
 
-  .menu.open span:nth-of-type(3) {
+  .menu.active span:nth-of-type(3) {
     top: 14px;
     transform: rotate(-45deg);
   }
@@ -165,13 +165,19 @@ export default{
   .drawer-nav-list {
     padding-top: 80px;
     text-align: center;
+    list-style:none;
   }
-
+.drawer-nav-list a{
+  text-decoration: none;
+  color: black;
+}
   .drawer-nav-item {
     margin-top: 40px;
     color: #0033cc;
     font-size: 18px;
   }
-
+.drawer-nav.open{
+  left:0;
+}
 }
 </style>
